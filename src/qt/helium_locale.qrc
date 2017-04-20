@@ -1,0 +1,20 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/helium_bg.qm</file>
+        <file alias="de">locale/helium_de.qm</file>
+        <file alias="en">locale/helium_en.qm</file>
+        <file alias="es">locale/helium_es.qm</file>
+        <file alias="fi">locale/helium_fi.qm</file>
+        <file alias="fr">locale/helium_fr.qm</file>
+        <file alias="it">locale/helium_it.qm</file>
+        <file alias="ja">locale/helium_ja.qm</file>
+        <file alias="pl">locale/helium_pl.qm</file>
+        <file alias="pt">locale/helium_pt.qm</file>
+        <file alias="ru">locale/helium_ru.qm</file>
+        <file alias="sk">locale/helium_sk.qm</file>
+        <file alias="sv">locale/helium_sv.qm</file>
+        <file alias="vi">locale/helium_vi.qm</file>
+        <file alias="zh_CN">locale/helium_zh_CN.qm</file>
+        <file alias="zh_TW">locale/helium_zh_TW.qm</file>
+    </qresource>
+</RCC>

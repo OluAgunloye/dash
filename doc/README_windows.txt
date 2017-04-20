@@ -1,9 +1,9 @@
-Dash Core 0.12.1
+Helium Core 0.12.1
 =====================
 
 Intro
 -----
-Dash is a free open source peer-to-peer electronic cash system that is
+Helium is a free open source peer-to-peer electronic cash system that is
 completely decentralized, without the need for a central server or trusted
 parties.  Users hold the crypto keys to their own money and transact directly
 with each other, with the help of a P2P network to check for double-spending.
@@ -11,13 +11,13 @@ with each other, with the help of a P2P network to check for double-spending.
 
 Setup
 -----
-Unpack the files into a directory and run dash-qt.exe.
+Unpack the files into a directory and run helium-qt.exe.
 
-Dash Core is the original Dash client and it builds the backbone of the network.
-However, it downloads and stores the entire history of Dash transactions;
+Helium Core is the original Helium client and it builds the backbone of the network.
+However, it downloads and stores the entire history of Helium transactions;
 depending on the speed of your computer and network connection, the synchronization
 process can take anywhere from a few hours to a day or more.
 
-See the dash wiki at:
-  https://dashpay.atlassian.net/wiki/
+See the helium wiki at:
+  https://heliumpay.atlassian.net/wiki/
 for more help and information.

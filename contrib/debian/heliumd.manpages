@@ -1,0 +1,3 @@
+debian/manpages/heliumd.1
+debian/manpages/helium.conf.5
+debian/manpages/helium-cli.1

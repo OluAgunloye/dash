@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2014 The Bitcoin developers
-// Copyright (c) 2014-2017 The Dash Core developers
+// Copyright (c) 2014-2017 The Helium Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -27,7 +27,7 @@ namespace Checkpoints {
     static const double SIGCHECK_VERIFICATION_FACTOR = 5.0;
 
     //! Guess how far we are in the verification process at the given block index
-    double GuessVerificationProgress(const CCheckpointData& data, CBlockIndex *pindex, bool fSigchecks) {
+    double GuessVerificationProgress(const ChainTxData& data, CBlockIndex *pindex, bool fSigchecks) {
         if (pindex==NULL)
             return 0.0;
 
@@ -39,16 +39,16 @@ namespace Checkpoints {
         // Work is defined as: 1.0 per transaction before the last checkpoint, and
         // fSigcheckVerificationFactor per transaction after.
 
-        if (pindex->nChainTx <= data.nTransactionsLastCheckpoint) {
+        if (pindex->nChainTx <= data.nTxCount) {
             double nCheapBefore = pindex->nChainTx;
-            double nCheapAfter = data.nTransactionsLastCheckpoint - pindex->nChainTx;
-            double nExpensiveAfter = (nNow - data.nTimeLastCheckpoint)/86400.0*data.fTransactionsPerDay;
+            double nCheapAfter = data.nTxCount - pindex->nChainTx;
+            double nExpensiveAfter = (nNow - data.nTime)/86400.0*data.dTxRate;
             fWorkBefore = nCheapBefore;
             fWorkAfter = nCheapAfter + nExpensiveAfter*fSigcheckVerificationFactor;
         } else {
-            double nCheapBefore = data.nTransactionsLastCheckpoint;
-            double nExpensiveBefore = pindex->nChainTx - data.nTransactionsLastCheckpoint;
-            double nExpensiveAfter = (nNow - pindex->GetBlockTime())/86400.0*data.fTransactionsPerDay;
+            double nCheapBefore = data.nTxCount;
+            double nExpensiveBefore = pindex->nChainTx - data.nTxCount;
+            double nExpensiveAfter = (nNow - pindex->GetBlockTime())/86400.0*data.dTxRate;
             fWorkBefore = nCheapBefore + nExpensiveBefore*fSigcheckVerificationFactor;
             fWorkAfter = nExpensiveAfter*fSigcheckVerificationFactor;
         }
