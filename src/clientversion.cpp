@@ -13,7 +13,7 @@
  * for both heliumd and helium-qt, to make it harder for attackers to
  * target servers or GUI users specifically.
  */
-const std::string CLIENT_NAME("Helium Core");
+const std::string CLIENT_NAME("Mr Spread");
 
 /**
  * Client version number
