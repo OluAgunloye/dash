@@ -74,7 +74,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
 
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "Bitcoin Block #462720: 0000000000000000005b05764038a767b16533fb63c67d759afb2f2259d75c6a";
+    const char* pszTimestamp = "Bitcoin Block #489086: 0000000000000000007054c9dc4f64a55711102d89efbef39becccca4ea1a4a0 Price is $4,814";
     const CScript genesisOutputScript = CScript() << ParseHex("") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
