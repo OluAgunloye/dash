@@ -39,39 +39,6 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
     return genesis;
 }
 
-/**
- * Build the genesis block. Note that the output of its generation
- * transaction cannot be spent since it did not originally exist in the
- * database.
- *
- * CBlock(hash=00000ffd590b14, ver=1, hashPrevBlock=00000000000000, hashMerkleRoot=e0028e, nTime=1390095618, nBits=1e0ffff0, nNonce=28917698, vtx=1)
- *   CTransaction(hash=e0028e, ver=1, vin.size=1, vout.size=1, nLockTime=0)
- *     CTxIn(COutPoint(000000, -1), coinbase 04ffff001d01044c5957697265642030392f4a616e2f3230313420546865204772616e64204578706572696d656e7420476f6573204c6976653a204f76657273746f636b2e636f6d204973204e6f7720416363657074696e6720426974636f696e73)
- *     CTxOut(nValue=50.00000000, scriptPubKey=0xA9037BAC7050C479B121CF)
- *   vMerkleTree: e0028e
- */
-
- /*
-    Mainnet ---
-      nonce: 826326
-      time: 1492699333
-      hash: 000003290c31d7fb347742a1d674e57d242d7a40b940cbb7919b6b4ad4c7d18a
-      merklehash: 6a8d14f36d8dc3089bb9c652b7691ab5a5ca4f292cd13fb1eed8bd2ff1ddab63
-
-    Testnet ---
-      nonce: 1370248
-       time: 1492705267
-       hash: 00000ddf2c43032ede55875730b6582b9152799c310864f1f9fb341f5f190b9e
-       merklehash: 6a8d14f36d8dc3089bb9c652b7691ab5a5ca4f292cd13fb1eed8bd2ff1ddab63
-
-    RegTestnet ---
-      nonce: 0
-       time: 1492699333
-       hash: 2da16d944eecba9c44a9b497d8896ec55ee108dc5f3de1c2f357e31627f6d6ec
-       merklehash: 6a8d14f36d8dc3089bb9c652b7691ab5a5ca4f292cd13fb1eed8bd2ff1ddab63
- */
-
-
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
     const char* pszTimestamp = "Bitcoin Block #489086: 0000000000000000007054c9dc4f64a55711102d89efbef39becccca4ea1a4a0 Price is $4,814";
