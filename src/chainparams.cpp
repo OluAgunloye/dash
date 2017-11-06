@@ -58,6 +58,9 @@ static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits
  * + Contains no strange transactions
  */
 
+//Starting off from SPR block 1657200 with 8,891,432 coins mined, plus 100,000 to repay a loan offered and agreed to by the community.
+//8,891,432 based on snapshot output of all addresses captured https://gist.github.com/gjhiggins/863cdf66e8c003f15c17038ffaf12007
+
 
 class CMainParams : public CChainParams {
 public:
